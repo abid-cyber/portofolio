@@ -198,7 +198,7 @@ export default function Home() {
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
             <a
-              href="/CV_Andini_Zakira.pdf"
+              href="/cv_Andini Zakira.pdf"
               download="CV_Andini_Zakira.pdf"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-500/10 active:scale-[0.98] transition-all cursor-pointer"
             >
@@ -262,7 +262,7 @@ export default function Home() {
               Kontak
             </a>
             <a
-              href="/CV_Andini_Zakira.pdf"
+              href="/cv_Andini Zakira.pdf"
               download="CV_Andini_Zakira.pdf"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3 rounded-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-md shadow-blue-500/10 cursor-pointer"

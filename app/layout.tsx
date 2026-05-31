@@ -13,10 +13,10 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Andini Zakira | Full-Stack Software Engineer & ML Specialist",
-  description: "Halo, saya Andini Zakira. Saya membangun aplikasi web dan mobile yang scalable dengan wawasan berbasis data. Jelajahi keahlian, pengalaman, dan projek unggulan saya menggunakan Next.js, Symfony, Flutter, dan Machine Learning.",
+  title: "Abid Mustaghfirin | Full-Stack Software Engineer & ML Specialist",
+  description: "Halo, saya Abid Mustaghfirin. Saya membangun aplikasi web dan mobile yang scalable dengan wawasan berbasis data. Jelajahi keahlian, pengalaman, dan projek unggulan saya menggunakan Next.js, Symfony, Flutter, dan Machine Learning.",
   keywords: [
-    "Andini Zakira",
+    "Abid Mustaghfirin",
     "Portfolio",
     "Software Engineer",
     "Machine Learning Specialist",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     "Web Developer",
     "PostgreSQL"
   ],
-  authors: [{ name: "Andini Zakira" }],
-  creator: "Andini Zakira",
+  authors: [{ name: "Abid Mustaghfirin" }],
+  creator: "Abid Mustaghfirin",
 };
 
 export default function RootLayout({

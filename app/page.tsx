@@ -677,7 +677,7 @@ export default function Home() {
                 : "text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200"
                 }`}
             >
-              Magang SMK
+              Pengalaman Kerja
             </button>
             <button
               onClick={() => setSelectedTab("organization")}

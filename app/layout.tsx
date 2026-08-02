@@ -13,13 +13,14 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Abid Mustaghfirin | Full-Stack Software Engineer & ML Specialist",
-  description: "Halo, saya Abid Mustaghfirin. Saya membangun aplikasi web dan mobile yang scalable dengan wawasan berbasis data. Jelajahi keahlian, pengalaman, dan projek unggulan saya menggunakan Next.js, Symfony, Flutter, dan Machine Learning.",
+  title: "Abid Mustaghfirin | Full-Stack & Business Developer",
+  description: "Halo, saya Abid Mustaghfirin. Saya seorang Full-Stack & Business Developer yang membangun aplikasi web, mobile, dan solusi bisnis yang scalable dengan performa tinggi. Jelajahi keahlian, pengalaman, dan projek unggulan saya.",
   keywords: [
     "Abid Mustaghfirin",
     "Portfolio",
+    "Full-Stack Developer",
+    "Business Developer",
     "Software Engineer",
-    "Machine Learning Specialist",
     "Next.js",
     "Symfony",
     "Flutter",

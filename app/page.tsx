@@ -134,7 +134,7 @@ export default function Home() {
     },
     {
       title: "Sistem Prediksi Kelayakan Beasiswa",
-      category: "Capstone Project - Feb 2026 – Sekarang",
+      category: "Capstone Project - Feb 2026 – Juli 2026",
       description: "Sistem prediksi otomatis kelayakan beasiswa menggunakan integrasi machine learning dengan antarmuka web admin dan aplikasi mobile untuk mahasiswa.",
       tech: ["Flutter", "Dart", "XGBoost", "SVM", "REST API", "Machine Learning"],
       highlights: [

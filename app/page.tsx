@@ -11,9 +11,9 @@ interface Project {
   description: string;
   tech: string[];
   highlights: string[];
-  github: string;
-  demo: string;
-  illustrationType: "catalog" | "bus" | "food";
+  github?: string;
+  demo?: string;
+  illustrationType: "catalog" | "bus" | "food" | "foundation";
 }
 
 interface TimelineItem {
@@ -112,38 +112,50 @@ export default function Home() {
   };
 
   const techStack = {
-    "Web Development": ["PHP", "Laravel", "Symfony", "Node.js", "Vue.js", "HTML", "CSS", "TailwindCSS"],
-    "Mobile & Database": ["Flutter", "Dart", "MySQL"],
-    "Architecture & Tools": ["API Integration", "MVC", "Microservices", "Visual Studio Code", "GitHub", "Python", "Figma"]
+    "Web Development": ["PHP", "Laravel", "Symfony", "TypeScript", "Node.js", "Express.js", "React", "Next.js", "Vue.js", "HTML", "CSS", "TailwindCSS"],
+    "Mobile, Database & API": ["Flutter", "Dart", "MySQL", "PostgreSQL", "REST API Integration"],
+    "ML, Architecture & Practices": ["Python", "XGBoost", "SVM", "MVC", "Microservices", "Unit Testing", "Git Workflow", "Code Review"],
+    "Tools & AI Workflow": ["Visual Studio Code", "Git & GitHub", "Figma", "Microsoft Office", "Claude", "Gemini", "ChatGPT", "Antigravity", "Cursor"]
   };
 
   const projects: Project[] = [
     {
-      title: "Sistem Prediksi Kelayakan Beasiswa",
-      category: "Capstone Project - 2026",
-      description: "Sistem prediksi otomatis kelayakan beasiswa menggunakan integrasi machine learning dengan antarmuka web admin dan mobile untuk kenyamanan mahasiswa.",
-      tech: ["Flutter", "Dart", "XGBoost", "SVM", "API Integration", "Machine Learning"],
+      title: "Website Yayasan Fauzan Adzima",
+      category: "Freelance Project - 2026",
+      description: "Website resmi Yayasan Fauzan Adzima dengan tampilan responsif, fitur donasi, serta statistik capaian yang terintegrasi dengan backend Laravel 12.",
+      tech: ["Vue.js", "Laravel 12", "PHP", "MySQL", "Frontend Developer"],
       highlights: [
-        "Mengembangkan Aplikasi Mobile (untuk mahasiswa) dan Web Admin (untuk panitia).",
-        "Menerapkan model XGBoost dan SVM sebagai sistem prediksi kelayakan otomatis.",
-        "Mengintegrasikan model machine learning ke antarmuka aplikasi menggunakan API."
+        "Membangun website resmi Yayasan Fauzan Adzima dengan tampilan responsif sebagai Frontend Developer.",
+        "Mengembangkan antarmuka menggunakan Vue.js yang terintegrasi dengan backend Laravel 12 (PHP) dan MySQL, serta membantu pengembangan backend tim.",
+        "Fitur utama: halaman program, legalitas, mitra, kontak, donasi, dan statistik capaian (total dana, jumlah donatur, program aktif, penerima manfaat)."
+      ],
+      demo: "https://yayasanfauzanadzima.org",
+      illustrationType: "foundation"
+    },
+    {
+      title: "Sistem Prediksi Kelayakan Beasiswa",
+      category: "Capstone Project - Feb 2026 – Sekarang",
+      description: "Sistem prediksi otomatis kelayakan beasiswa menggunakan integrasi machine learning dengan antarmuka web admin dan aplikasi mobile untuk mahasiswa.",
+      tech: ["Flutter", "Dart", "XGBoost", "SVM", "REST API", "Machine Learning"],
+      highlights: [
+        "Mengembangkan aplikasi mobile untuk mahasiswa dan web admin untuk panitia.",
+        "Menerapkan model XGBoost dan SVM sebagai sistem prediksi kelayakan beasiswa otomatis.",
+        "Mengintegrasikan model machine learning ke antarmuka aplikasi melalui API."
       ],
       github: "https://github.com/abid-cyber/prediksi-beasiswa",
-      demo: "#",
       illustrationType: "food"
     },
     {
       title: "Sistem Reservasi & Promosi Villa Hasanah",
       category: "Personal Project - 2025",
       description: "Aplikasi web client-server untuk otomatisasi sistem reservasi villa dan promosi kavling secara interaktif dan responsif.",
-      tech: ["Symfony Framework", "PHP", "MySQL", "MVC", "Bootstrap"],
+      tech: ["Symfony", "PHP", "MySQL", "MVC", "Bootstrap"],
       highlights: [
         "Membangun aplikasi web client-server untuk otomatisasi reservasi villa dan promosi kavling.",
         "Mengimplementasikan framework Symfony (MVC) dan MySQL untuk pengelolaan basis data.",
-        "Merancang antarmuka publik yang responsif dan dashboard back-end khusus untuk admin."
+        "Merancang antarmuka publik yang responsif dan dashboard back-end khusus admin."
       ],
       github: "https://github.com/abid-cyber/Vila-Hasanah",
-      demo: "#",
       illustrationType: "bus"
     },
     {
@@ -152,48 +164,35 @@ export default function Home() {
       description: "Platform e-katalog digital yang dirancang untuk mempermudah pemasaran produk serta melakukan digitalisasi data inventarisasi barang toko.",
       tech: ["Project Manager", "Frontend Development", "HTML", "CSS", "MySQL"],
       highlights: [
-        "Berperan sebagai Project Manager yang bertanggung jawab atas perencanaan dan pengawasan proyek.",
-        "Berkontribusi langsung secara teknis dalam merancang dan mengembangkan kode antarmuka pengguna (Frontend).",
-        "Memastikan seluruh tahapan proyek berjalan lancar dari awal hingga penyusunan laporan."
+        "Bertanggung jawab atas perencanaan, pelaksanaan, dan pengawasan proyek agar berjalan sesuai jadwal dan kebutuhan.",
+        "Berkontribusi langsung dalam merancang dan mengembangkan antarmuka pengguna (frontend)."
       ],
       github: "https://github.com/intersectcode-A1/intersectcode_textilehub",
-      demo: "#",
       illustrationType: "catalog"
     }
   ];
 
   const timeline: TimelineItem[] = [
     {
-      role: "IT Support",
-      organization: "PT. SINARMULIA ANDALAS INFOCOM",
-      period: "Okt 2021 – Jan 2022",
+      role: "Fullstack Developer Intern",
+      organization: "PT Bejana Inovasi Global",
+      period: "Agustus 2026 – Desember 2026",
       type: "work",
       highlights: [
-        "Melakukan instalasi dan konfigurasi sistem operasi serta software pada perangkat laptop/PC baru.",
-        "Melakukan perakitan hardware PC dan troubleshooting kerusakan ringan.",
-        "Melakukan instalasi, pengujian, dan maintenance driver printer untuk memastikan kesiapan pakai."
+        "Mengembangkan dan memelihara fitur web, mobile, serta backend API pada proyek Sindang Priatim, Silinda, dan Dzikra menggunakan TypeScript, Node.js (Express.js), React / Next.js, dan Flutter.",
+        "Menyelesaikan integrasi endpoint API, pengelolaan data aplikasi, serta penulisan unit test untuk menjaga keandalan dan konsistensi performa layanan.",
+        "Berkolaborasi dengan tim developer dalam alur kerja Git, code review, dan pengelolaan basis data relasional (MySQL, PostgreSQL) sesuai standar pengembangan tim."
       ]
     },
     {
-      role: "Wakil Ketua Pelaksanaan Oprec & Programming Staff",
-      organization: "UKM PNP Cybertech",
-      period: "2023 – 2025",
-      type: "organization",
+      role: "Essential & Practitioner Training Program, Digdaya x Hackathon 2026",
+      organization: "Pusat Inovasi Digital Indonesia | Bank Indonesia",
+      period: "Mei – Agustus 2026",
+      type: "award",
       highlights: [
-        "Wakil Ketua Pelaksanaan Open Recruitment (2023 – 2024).",
-        "Staff Divisi Programming (2023 – 2025).",
-        "Berkontribusi dalam kegiatan pelatihan teknologi, pemrograman, dan koordinasi kepanitiaan organisasi."
-      ]
-    },
-    {
-      role: "Ketua Pelaksanaan TI CUP & Anggota Divisi MIKAT",
-      organization: "HMJ-TEKINFO",
-      period: "2023 – 2024",
-      type: "organization",
-      highlights: [
-        "Ketua Pelaksanaan Futsal TI CUP (2024).",
-        "Anggota Divisi Minat dan Bakat (MIKAT) (2023 – 2024).",
-        "Bertanggung jawab dalam merencanakan, melaksanakan, dan mengoordinasikan turnamen futsal mahasiswa tingkat jurusan."
+        "Terpilih sebagai Top 400 peserta dan meraih Certificate of Completion.",
+        "Mengikuti Essential Training (2 Mei – 23 Juni 2026).",
+        "Menyelesaikan Practitioner Training (24 Juni – 11 Agustus 2026)."
       ]
     },
     {
@@ -202,16 +201,57 @@ export default function Home() {
       period: "16 – 17 Mei 2026",
       type: "award",
       highlights: [
-        "Mencetuskan ide dan konsep utama CAMPUS-E dalam tim (5 orang) sebagai sistem prediksi risiko depresi mahasiswa berbasis NLP (IndoBERT) dengan prinsip Early-Warning dan Empathy.",
-        "Berkontribusi dalam pengembangan frontend reaktif menggunakan Livewire v3, Livewire Volt, dan Tailwind CSS v4 untuk membangun antarmuka pengguna yang responsif.",
-        "Membantu perancangan alur sistem proaktif untuk mendeteksi indikasi stres dari bahasa informal/curhatan mahasiswa sebelum diintegrasikan ke AI.",
-        "Sukses mempresentasikan inovasi solusi kesehatan mental ini bersama tim hingga berhasil meraih penghargaan Juara 3."
+        "Berperan sebagai Ketua Tim sekaligus Programmer, memimpin koordinasi tim dan mengembangkan solusi yang diajukan.",
+        "Mencetuskan konsep CAMPUS-E dalam tim (5 orang) sebagai sistem prediksi risiko depresi mahasiswa berbasis NLP (IndoBERT) dengan prinsip Early-Warning dan Empathy.",
+        "Berkontribusi dalam pengembangan frontend reaktif menggunakan Livewire v3, Livewire Volt, dan Tailwind CSS v4 hingga meraih penghargaan Juara 3."
+      ]
+    },
+    {
+      role: "Staff Divisi Programming & Wakil Ketua Pelaksana Oprec",
+      organization: "UKM PNP Cybertech",
+      period: "2023 – 2025",
+      type: "organization",
+      highlights: [
+        "Staff Divisi Programming (2023 – 2025).",
+        "Wakil Ketua Pelaksana Open Recruitment (2023 – 2024).",
+        "Berkontribusi dalam kegiatan pelatihan teknologi, pemrograman, dan koordinasi kepanitiaan organisasi."
+      ]
+    },
+    {
+      role: "Ketua Pelaksana Futsal TI CUP & Anggota Divisi MIKAT",
+      organization: "HMJ-TEKINFO",
+      period: "2023 – 2024",
+      type: "organization",
+      highlights: [
+        "Ketua Pelaksana Futsal TI CUP (2024).",
+        "Anggota Divisi Minat dan Bakat (MIKAT) (2023 – 2024).",
+        "Bertanggung jawab merencanakan, melaksanakan, dan mengoordinasikan turnamen futsal mahasiswa tingkat jurusan."
+      ]
+    },
+    {
+      role: "IT Support",
+      organization: "PT. Sinarmulia Andalas Infocom",
+      period: "Oktober 2021 – Januari 2022",
+      type: "work",
+      highlights: [
+        "Menginstal dan mengonfigurasi sistem operasi serta software pada laptop/PC baru.",
+        "Merakit hardware PC dan melakukan troubleshooting kerusakan ringan.",
+        "Menginstal, menguji, dan memelihara driver printer agar siap digunakan."
       ]
     },
   ];
 
   // Helper component to render SVG illustrations for project cards
-  const ProjectIllustration = ({ type }: { type: "catalog" | "bus" | "food" }) => {
+  const ProjectIllustration = ({ type }: { type: "catalog" | "bus" | "food" | "foundation" }) => {
+    if (type === "foundation") {
+      return (
+        <div className="w-full h-full bg-cyan-50 dark:bg-slate-900 flex items-center justify-center relative">
+          <svg className="w-20 h-20 text-cyan-600 dark:text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+          </svg>
+        </div>
+      );
+    }
     if (type === "catalog") {
       return (
         <div className="w-full h-full bg-blue-50 dark:bg-slate-900 flex items-center justify-center relative">
@@ -267,7 +307,7 @@ export default function Home() {
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
             <a
-              href="/CV.Abid Mustaghfirin.pdf"
+              href="/CV_Abid_Mustaghfirin.pdf"
               download="CV_Abid_Mustaghfirin.pdf"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-500/10 active:scale-[0.98] transition-all cursor-pointer"
             >
@@ -331,7 +371,7 @@ export default function Home() {
               Kontak
             </a>
             <a
-              href="/cv_Abid Mustaghfirin.pdf"
+              href="/CV_Abid_Mustaghfirin.pdf"
               download="CV_Abid_Mustaghfirin.pdf"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3 rounded-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-md shadow-blue-500/10 cursor-pointer"
@@ -380,7 +420,7 @@ export default function Home() {
                 <span className="w-[3px] h-[30px] bg-blue-600 dark:bg-blue-400 animate-pulse inline-block"></span>
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-lg font-medium leading-relaxed">
-                Pengembang Full-Stack dan Machine Learning yang fokus menciptakan produk digital scalable, inovatif, dan berbasis data untuk kebutuhan pengguna serta bisnis.
+                Full-Stack & Website Developer yang fokus membangun solusi website modern, fungsional, dan scalable.
               </p>
             </div>
 
@@ -506,13 +546,37 @@ export default function Home() {
             {/* Right Story Text */}
             <div className="lg:col-span-7 flex flex-col space-y-6 text-slate-650 dark:text-slate-350 text-base sm:text-lg leading-relaxed">
               <p className="text-justify">
-                Mahasiswa D4 Teknologi Rekayasa Perangkat Lunak yang memiliki minat
-                dalam pengembang teknologi, khususnya dibidang Full Stack Development.
-                Didukung latar belakang dan kemampuan teknis yang solid, saya siap
-                berkontribusi dalam pengembangan solusi web yang inovatif, fungsional, dan
-                berorientasi pada pengguna dan saya siap belajar hal yang baru.
-                Selain fokus di bidang akademis, saya aktif dalam kegiatan organisasi kampus seperti UKM PNP Cybertech dan HMJ-TEKINFO. Pengalaman kepemimpinan ini membentuk soft-skills saya dalam komunikasi, pemecahan masalah (problem solving), kerja sama tim, kedisiplinan, serta manajemen waktu yang baik. Saya adalah pribadi yang adaptif, disiplin, dan selalu bersemangat untuk mempelajari teknologi baru demi memberikan kontribusi nyata dalam setiap proyek perangkat lunak.
+                Mahasiswa D4 Teknologi Rekayasa Perangkat Lunak di Politeknik Negeri Padang (IPK 3.81) dengan fokus di bidang Full-Stack Development dan pengalaman magang sebagai Fullstack Developer. Saya berpengalaman membangun aplikasi web dan mobile, mengembangkan REST API, mengelola basis data relasional (MySQL & PostgreSQL), serta mengintegrasikan model machine learning (XGBoost, SVM) ke dalam aplikasi.
               </p>
+              <p className="text-justify">
+                Di luar akademik, saya aktif berkontribusi dalam organisasi kampus seperti UKM PNP Cybertech dan HMJ-TEKINFO yang mengasah kepemimpinan, komunikasi, serta kerja sama tim.
+              </p>
+
+              {/* Education Summary Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/50">
+                  <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
+                    2023 – Sekarang
+                  </span>
+                  <h3 className="font-outfit text-base font-bold text-slate-900 dark:text-slate-100">
+                    Politeknik Negeri Padang
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    D4 Teknologi Rekayasa Perangkat Lunak • IPK 3.81
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/50">
+                  <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
+                    2020 – 2023
+                  </span>
+                  <h3 className="font-outfit text-base font-bold text-slate-900 dark:text-slate-100">
+                    SMK Negeri 5 Padang
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    Teknik Komputer dan Jaringan
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -526,7 +590,7 @@ export default function Home() {
             <div className="w-16 h-1 bg-blue-600 dark:bg-blue-500 mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Object.entries(techStack).map(([category, skills]) => (
               <div
                 key={category}
@@ -562,7 +626,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, idx) => (
               <div
                 key={idx}
@@ -617,28 +681,32 @@ export default function Home() {
 
                     {/* Actions Row */}
                     <div className="flex items-center space-x-3 pt-4 border-t border-slate-100 dark:border-slate-850">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold border border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/20 active:scale-[0.98] transition-all cursor-pointer flex-1"
-                      >
-                        <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                          <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.867 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
-                        </svg>
-                        GitHub
-                      </a>
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 active:scale-[0.98] transition-all cursor-pointer flex-1"
-                      >
-                        Demo Langsung
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold border border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/20 active:scale-[0.98] transition-all cursor-pointer flex-1"
+                        >
+                          <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.867 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                          </svg>
+                          GitHub
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 active:scale-[0.98] transition-all cursor-pointer flex-1"
+                        >
+                          Kunjungi Website
+                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -695,7 +763,7 @@ export default function Home() {
                 : "text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200"
                 }`}
             >
-              Lomba & Prestasi
+              Lomba & Sertifikasi
             </button>
           </div>
 
@@ -841,6 +909,40 @@ export default function Home() {
                       </span>
                     </div>
                   </a>
+
+                  {/* Phone */}
+                  <a
+                    href="tel:+6282169887830"
+                    className="flex items-center gap-4 group p-3 rounded-xl hover:bg-white dark:hover:bg-slate-900/50 hover:shadow-sm transition-all cursor-pointer"
+                  >
+                    <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 shrink-0">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Telepon / WhatsApp</span>
+                      <span className="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        +62 821-6988-7830
+                      </span>
+                    </div>
+                  </a>
+
+                  {/* Location */}
+                  <div className="flex items-center gap-4 p-3 rounded-xl">
+                    <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 shrink-0">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Lokasi</span>
+                      <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                        Padang, Sumatera Barat
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
